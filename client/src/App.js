@@ -5,7 +5,7 @@ import './App.css';
 /*global Go, SayHello*/
 const go = new Go();
 
-WebAssembly.instantiateStreaming(fetch('main.wasm'), go.importObject).then(
+WebAssembly.instantiateStreaming(fetch('https://siasky.net/_AwYtSBocYjgprXwX65_Zkd_Ey9Xa6Y-luBqGvmyLmWMMw/main.wasm'), go.importObject).then(
   (result) => {
     go.run(result.instance);
     console.log(SayHello());
